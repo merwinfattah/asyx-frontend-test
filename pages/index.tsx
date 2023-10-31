@@ -15,8 +15,8 @@ type Task = {
 
 const headerStyle: React.CSSProperties = {
   display: 'flex',
-  alignItems: 'center',     // Vertically center the content
-  justifyContent: 'center', // Horizontally center the content
+  alignItems: 'center',     
+  justifyContent: 'center', 
   textAlign: 'center',
   color: '#fff',
   height: 64,
@@ -110,17 +110,12 @@ const handleEditClick = (task: any) => {
 };
 
 const handleEditSave = () => {
-  // Find the task in the taskList and update its title
   const updatedTaskList = taskList.map((task) =>
     task.id === editingTask.id
       ? { ...task, title: editedTaskTitle }
       : task
   );
-
-  // Update the taskList state with the edited task
   setTaskList(updatedTaskList);
-
-  // Reset editing state
   setEditingTask(null);
   setEditedTaskTitle('');
 };
