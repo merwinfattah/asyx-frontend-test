@@ -104,12 +104,12 @@ function handleSubmit(values: any) {
   setModalOpen(false);
 }
 
-const handleEditClick = (task: any) => {
+function handleEditClick(task: any) {
   setEditingTask(task);
   setEditedTaskTitle(task?.title);
 };
 
-const handleEditSave = () => {
+function handleEditSave() {
   const updatedTaskList = taskList.map((task) =>
     task.id === editingTask.id
       ? { ...task, title: editedTaskTitle }
@@ -120,7 +120,7 @@ const handleEditSave = () => {
   setEditedTaskTitle('');
 };
 
-const handlePageChange = (page: number) => {
+function handlePageChange(page: number) {
   setCurrentPage(page);
 };
 
