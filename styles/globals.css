@@ -16,6 +16,16 @@
   }
 }
 
+@media (max-width: 590px) {
+  .hide-on-small {
+    display: none;
+  },
+  .list-not-flex {
+    display: block; /* Use a block layout for small screens */
+    text-align: left; /* Align items to the left */
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
